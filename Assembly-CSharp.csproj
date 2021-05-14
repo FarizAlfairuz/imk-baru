@@ -36,7 +36,8 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Textures &amp; Materials\walls\One-Click_Wall_Materials\Scenes\Misc\MaterialChanger.cs" />
+     <Compile Include="Assets\3D Assets\Textures &amp; Materials\walls\One-Click_Wall_Materials\Scenes\Misc\MaterialChanger.cs" />
+     <Compile Include="Assets\GameScript\Accelerometer.cs" />
      <None Include="Assets\3D Assets\Treadmill\Details.txt" />
      <None Include="Assets\3D Assets\TV\_Television_set\SpecGrayscaleSF.shader" />
     <Reference Include="UnityEngine">
