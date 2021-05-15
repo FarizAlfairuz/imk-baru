@@ -2,13 +2,14 @@
 
 public class GameManager : MonoBehaviour
 {
-    private bool gameOver = false;
+    public static bool gameOver = false;
 
     public void EndGame()
     {
         if (gameOver == false)
         {
             gameOver = true;
+            Time.timeScale = 0;
             Debug.Log("Game Over");
         }
     }
