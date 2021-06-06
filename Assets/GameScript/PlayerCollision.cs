@@ -7,6 +7,8 @@ public class PlayerCollision : MonoBehaviour
     //public PlayerMovement movement;
     public float powerUpDuration = 1f;
     public bool powerUpIsActivated = false;
+    public GameObject shield;
+    public GameObject pickupEffect;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -27,9 +29,13 @@ public class PlayerCollision : MonoBehaviour
         //Instantiate(pickupEffect, transform.position, transform.rotation);
         Destroy(obj);
         powerUpIsActivated = true;
+        shield.GetComponent<MeshRenderer>().enabled = true;
+        GameObject effect =  Instantiate(pickupEffect, transform.position, transform.rotation);
+        Destroy(effect, 1);
 
         yield return new WaitForSeconds(powerUpDuration);
 
+        shield.GetComponent<MeshRenderer>().enabled = false;
         powerUpIsActivated = false;
         Debug.Log("Power up is deactivated");
     }
