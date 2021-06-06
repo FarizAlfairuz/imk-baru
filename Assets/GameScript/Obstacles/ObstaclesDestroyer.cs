@@ -19,7 +19,7 @@ public class ObstaclesDestroyer : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Obstacles")
+        if (collision.gameObject.tag == "Obstacles" || collision.gameObject.tag == "PowerUp")
         {
             Destroy(collision.gameObject);
         }
